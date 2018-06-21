@@ -20,12 +20,16 @@ if   choice  ==  '1'    :
     else :
         print "Cable is'nt Connected"
 
-
-
-
 elif    choice  ==  '2' :
 
     print  "Internet connectivity is checking in a while"
+    connec_check=commands.getoutput('ping 8.8.8.8')
+    if  'reply' in  connec_check:
+    	print  "Connection Established"
+
+    else :
+        print "Connection Not Estabilished"
+
 
 elif  choice  ==  '3'  :
 
